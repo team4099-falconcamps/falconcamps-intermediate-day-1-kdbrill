@@ -9,6 +9,10 @@ public class ShooterSparkPID extends SubsystemBase {
     private final CANEncoder shooterEncoder = shooterLeader.getEncoder();
     private final CANPIDController pidController = shooterFollower.getPIDController();
 
+
+
+    pidController.SetReference(0.0, ControlType.kVelocity);
+
     public ShooterSparkPID() {}
 
     @Override
